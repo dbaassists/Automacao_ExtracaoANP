@@ -1,0 +1,672 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../funcao/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+    
+    
+      
+        <title>Regras Negócio - Projeto Análise Preço Combustiveis ANP</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35e1ed30.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#regras-de-negocio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Projeto Análise Preço Combustiveis ANP" class="md-header__button md-logo" aria-label="Projeto Análise Preço Combustiveis ANP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projeto Análise Preço Combustiveis ANP
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Regras Negócio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Modo noturno"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo noturno" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-blue" data-md-color-accent="indigo"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Projeto Análise Preço Combustiveis ANP" class="md-nav__button md-logo" aria-label="Projeto Análise Preço Combustiveis ANP" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Projeto Análise Preço Combustiveis ANP
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Regras Negócio
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Regras Negócio
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-download-das-informacoes" class="md-nav__link">
+    1 - Download das Informações 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tratamento-dos-dados" class="md-nav__link">
+    2 - Tratamento dos Dados 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-filtrar-dados-utilizados" class="md-nav__link">
+    3 - Filtrar Dados Utilizados 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-calcular-a-media-de-venda-de-cada-combustivel" class="md-nav__link">
+    4 - Calcular a média de venda de cada combustivel 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pivot-das-colunas-transformar-linhas-em-colunas" class="md-nav__link">
+    5 - Pivot das Colunas (Transformar linhas em colunas) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-envio-informacoes" class="md-nav__link">
+    6 - Envio Informações 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../funcao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funções
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fluxo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Codificação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-download-das-informacoes" class="md-nav__link">
+    1 - Download das Informações 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tratamento-dos-dados" class="md-nav__link">
+    2 - Tratamento dos Dados 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-filtrar-dados-utilizados" class="md-nav__link">
+    3 - Filtrar Dados Utilizados 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-calcular-a-media-de-venda-de-cada-combustivel" class="md-nav__link">
+    4 - Calcular a média de venda de cada combustivel 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-pivot-das-colunas-transformar-linhas-em-colunas" class="md-nav__link">
+    5 - Pivot das Colunas (Transformar linhas em colunas) 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-envio-informacoes" class="md-nav__link">
+    6 - Envio Informações 
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="regras-de-negocio">Regras de Negócio</h1>
+<p>Regras de negócio que deverão ser aplicadas.</p>
+<h2 id="1-download-das-informacoes">1 - Download das Informações <br></h2>
+<ul>
+<li>Origem das Informações: <a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis">Site ANP</a></li>
+<li>Período: 2022 e 2023<ul>
+<li><a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/precos-semestrais-ca.zip">1º Semetre de 2022</a></li>
+<li><a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip">2º Semetre de 2022</a></li>
+<li><a href="https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip">3º Semetre de 2023</a></li>
+</ul>
+</li>
+<li>Link para realizar o download.<ul>
+<li>https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/precos-semestrais-ca.zip</li>
+<li>https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2022-02.zip</li>
+<li>https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/arquivos/shpc/dsas/ca/ca-2023-01.zip</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-tratamento-dos-dados">2 - Tratamento dos Dados <br><br></h2>
+<ul>
+<li>2.1 - Definir quais colunas serão importadas;</li>
+<li>2.2 - Ajustar a nomenclatura das colunas;</li>
+<li>2.3 - Definir o DataType das colunas;</li>
+<li>2.4 - Tratar colunas de data;</li>
+<li>2.5 - Tratar colunas nulas;<ul>
+<li>2.5.1 - Tratar colunas nulas - Colunas do Tipo String, informar 'NI';</li>
+<li>2.5.2 - Tratar colunas nulas - Colunas do Tipo Numérico, informar 0 (zero);</li>
+</ul>
+</li>
+<li>2.6 - A partir da coluna Data Coleta, criar outras três colunas:<ul>
+<li>2.6.1 - AnoMes, formato AAAAMM;</li>
+<li>2.6.2 - Ano, formato AAAA;</li>
+<li>2.6.3 - Mes, formato MM;</li>
+</ul>
+</li>
+<li>2.7 - Criar coluna "Endereço Completo" com o formato:<ul>
+<li>2.7.1 - Coluna("Nome da Rua") + ", NR: " + Coluna("Nome da Rua") + ', COMPLEMENTO: ' + Coluna("Complemento") + ' - BAIRRO: ' + Coluna("Bairro")</li>
+</ul>
+</li>
+<li>2.8 - Tratar o DataType da Coluna "Valor de Venda" para numérico;</li>
+<li>2.9 - Eliminar a Coluna "Valor de Compra";</li>
+</ul>
+<h2 id="3-filtrar-dados-utilizados">3 - Filtrar Dados Utilizados <br><br></h2>
+<ul>
+<li>
+<p>3.1 - Dados dos Estados "RJ", "SP", "CE" e "MA", onde:</p>
+<ul>
+<li>3.1.1 - Estado "CE", Municipio "JUAZEIRO DO NORTE";</li>
+<li>3.1.2 - Estado "MA", Municipio "IMPERATRIZ";</li>
+<li>3.1.3 - Estado "RJ", Municipio "SAO GONCALO";</li>
+<li>3.1.4 - Estado "SP", Municipio "BARUERI";</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Município</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ceará - CE</td>
+<td>Juazeiro do Norte</td>
+</tr>
+<tr>
+<td>Maranhão - MA</td>
+<td>Imperatriz</td>
+</tr>
+<tr>
+<td>Rio de Janeiro - RJ</td>
+<td>São Gonçalo</td>
+</tr>
+<tr>
+<td>São Paulo - SP</td>
+<td>Barueri</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="4-calcular-a-media-de-venda-de-cada-combustivel">4 - Calcular a média de venda de cada combustivel <br><br></h2>
+<ul>
+<li>
+<p>4.1 - Agrupar os dados pelas colunas:</p>
+<ul>
+<li>Regiao</li>
+<li>UF</li>
+<li>NomMunicipio</li>
+<li>NomBairro</li>
+<li>NomRevenda</li>
+<li>NomEnderecoCompleto</li>
+<li>DscProduto</li>
+<li>AnoMes</li>
+<li>Ano</li>
+<li>Mes</li>
+</ul>
+</li>
+<li>
+<p>4.2 - Calcular a média sobre a coluna "Valor de Venda":</p>
+</li>
+</ul>
+<h2 id="5-pivot-das-colunas-transformar-linhas-em-colunas">5 - Pivot das Colunas (Transformar linhas em colunas) <br><br></h2>
+<ul>
+<li>5.1 - Colunas que não deverão mudar:<ul>
+<li>Regiao</li>
+<li>UF</li>
+<li>NomMunicipio</li>
+<li>NomBairro</li>
+<li>NomRevenda</li>
+<li>NomEnderecoCompleto</li>
+<li>DscProduto</li>
+</ul>
+</li>
+<li>5.2 - Linha que vai virar coluna:<ul>
+<li>AnoMes</li>
+<li>VlrMedio</li>
+</ul>
+</li>
+<li>5.3 - Colunas com valores nulos deverão ser preenchidas com zero:</li>
+</ul>
+<h2 id="6-envio-informacoes">6 - Envio Informações <br><br></h2>
+<ul>
+<li>
+<p>6.1 - O envio do e-mail deverá obedecer a seguinte regra:</p>
+<ul>
+<li>3.1.1 - Estado "CE", xpto_ce@empresatransporte.com.br;</li>
+<li>3.1.2 - Estado "MA", xpto_ma@empresatransporte.com.br;</li>
+<li>3.1.3 - Estado "RJ", xpto_rj@empresatransporte.com.br;</li>
+<li>3.1.4 - Estado "SP", xpto_sp@empresatransporte.com.br;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Estado</th>
+<th>Município</th>
+<th>E-mail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ceará - CE</td>
+<td>Juazeiro do Norte</td>
+<td>xpto_ce@empresatransporte.com.br</td>
+</tr>
+<tr>
+<td>Maranhão - MA</td>
+<td>Imperatriz</td>
+<td>xpto_ma@empresatransporte.com.br</td>
+</tr>
+<tr>
+<td>Rio de Janeiro - RJ</td>
+<td>São Gonçalo</td>
+<td>xpto_rj@empresatransporte.com.br</td>
+</tr>
+<tr>
+<td>São Paulo - SP</td>
+<td>Barueri</td>
+<td>xpto_sp@empresatransporte.com.br</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>
