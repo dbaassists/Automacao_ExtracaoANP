@@ -1,0 +1,28 @@
+site_name: Projeto Análise Preço Combustiveis ANP
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
+    - scheme: slate
+      primary: deep blue
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+nav:
+  - Home: index.md
+  - Regras Negócio: regras.md
+  - Funções: funcao.md
+  - Codificação: fluxo.md
+
+markdown-extensions:
+  - pymdownx.tasklist
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
